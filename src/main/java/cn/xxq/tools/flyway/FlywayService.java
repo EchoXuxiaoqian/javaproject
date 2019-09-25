@@ -40,7 +40,26 @@ public class FlywayService {
     private String user;
     private String password;
     private Flyway flyway;
+    
+    /**
+     * @return the flyway
+     */
+    public Flyway getFlyway() {
+        return flyway;
+    }
 
+    /**
+     * @param flyway the flyway to set
+     */
+    public void setFlyway(Flyway flyway) {
+        this.flyway = flyway;
+    }
+
+    /**
+     * @param dburl
+     * @param dbuser
+     * @param dbpassword
+     */
     public FlywayService(String dburl, String dbuser, String dbpassword) {
         LOG.isDebugEnabled();
         this.url = dburl;
